@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Sunu Market</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Sunu Market</div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="index.html#boutique">Boutique</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="panier">Panier (<span id="count">0</span>)</div>
+</header>
+
+<section class="contact-section">
+  <h2>Contact</h2>
+  <form id="formcontact" class="contact-form"> 
+    <input type="text" placeholder="Nom" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Message" rows="5" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+  <script>
+    // Sélection du formulaire
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Empêche l'envoi réel du formulaire
+      alert("Merci ! Mme Aïcha a bien reçu votre message.");
+      form.reset(); // Réinitialise le formulaire si tu veux
+    });
+  </script>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Sunu Market - Tous droits réservés</p>
+  <p>Binôme : MBAE ALI/Annyck Horine KOUMBA MAMFOUMBI</p>
+  <p>Ce que nous avons compris : créer un site vitrine avec HTML, CSS et JS.</p>
+  <p>Ce qui nous a été difficile : le responsive et la logique JavaScript.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

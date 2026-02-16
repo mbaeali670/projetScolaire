@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sunu Market</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">Sunu Market</div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="#boutique">Boutique</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="#panier">Panier (<span id="panier-count">0</span>)</a>
+<button class="btn-panier">Ajouter au panier</button>
+<button class="btn-panier">Ajouter au panier</button>
+<button class="btn-panier">Ajouter au panier</button>
+</header> 
+<section class="hero">
+  <div class="hero-content">
+    <h1>Le meilleur du Sénégal chez vous</h1>
+    <p>Produits locaux, bio et artisanaux</p>
+    <a href="#" class="btn">Commander maintenant</a>
+  </div>
+</section>
+   <h2>Notre Histoire</h2>
+  <div class="presentation">
+    <img src="AICHA DIOPE.jpeg" alt="Photo de Mme Aicha" class="photo">
+    <div class="texte">
+        <p>Mme Aïcha est la fondatrice de Sunu Market,Elle est une entrepreneure engagée dans la valorisation des produits locaux du Sénégal.</p>
+        <p>Son projet vise à promouvoir le savoir-faire des producteurs nationaux,Elle travaille en collaboration avec des artisans et agriculteurs locaux.</p>
+        <p>Son objectif principal est de garantir des produits de qualité aux consommateurs.Grâce à sa détermination, Sunu Market connaît un développement constant.</p>
+        <p>Elle encourage la consommation responsable et durable.Son entreprise contribue au développement économique local.</p>
+        <p>Mme Aïcha met l’innovation au service du commerce traditionnel.Elle œuvre chaque jour pour satisfaire ses clients et partenaires</p>
+    </div>
+  </div>
+</section>
+<section id="boutique" class="boutique">
+  <h2>Nos Produits</h2>
+  <div class="produits-grid">
+    <div class="produit-card">
+      <img src="JUS NATUREL.jpeg" alt="Jus naturel">
+      <h3>Jus naturel</h3><section class="about">
+      <p class="prix">1500 FCFA</p>
+      <button onclick="ajouterPanier('Jus naturel')">Ajouter au panier</button>
+    </div>
+    <div class="produit-card">
+      <img src="céréales locales.jpeg" alt="Céréales locales">
+      <h3>Céréales locales</h3>
+      <p class="prix">2000 FCFA</p>
+      <button onclick="ajouterPanier('Céréales locales')">Ajouter au panier</button>
+    </div>
+    <div class="produit-card">
+      <img src="MIEL NATUREL.jpeg" alt="Miel naturel">
+      <h3>Miel naturel</h3>
+      <p class="prix">2500 FCFA</p>
+      <button onclick="ajouterPanier('Miel naturel')">Ajouter au panier</button>
+    </div>
+    <div class="produit-card">
+      <img src="Tissu africain.jpeg" alt="Tissu africain">
+      <h3>Tissu africain</h3>
+      <p class="prix">5000 FCFA</p>
+      <button onclick="ajouterPanier('Tissu africain')">Ajouter au panier</button>
+    </div>
+    <div class="produit-card">
+      <img src="cafe.jpeg" alt="Café local">
+      <h3>Café local</h3>
+      <p class="prix">1800 FCFA</p>
+      <button onclick="ajouterPanier('Café local')">Ajouter au panier</button>
+    </div>
+    <div class="produit-card">
+      <img src="arachide.jpeg" alt="Arachides">
+      <h3>Arachides</h3>
+      <p class="prix">1000 FCFA</p>
+      <button onclick="ajouterPanier('Arachides')">Ajouter au panier</button>
+    </div>
+  </div>
+</section>
+<div id="message" class="message"></div>
+<button id="topBtn" onclick="retourHaut()">↑ Haut</button>
+<button>Ajouter au panier</button>
+<footer class="footer">
+  <p>© 2026 Sunu Market - Tous droits réservés</p>
+  <p>Binôme : MBAE ALI /Annyck Horine KOUMBA MAMFOUMBI</p>
+  <p>Ce que nous avons compris : créer un site vitrine avec HTML, CSS et JS.</p>
+  <p>Ce qui nous a été difficile : le responsive et la logique JavaScript.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
