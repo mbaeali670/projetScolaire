@@ -1,160 +1,258 @@
-/* RESET & BASE */
-* { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
-body { line-height:1.5; background:#fff8f0; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-/* HEADER */
+body {
+  line-height: 1.5;
+  background: #f5ece8;
+}
+
+/* ================= HEADER ================= */
+
 header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 20px;
-  background:#f29f05;
-  flex-wrap:wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #f26522;
+  flex-wrap: wrap;
 }
-header .logo { color:#fff; font-weight:bold; font-size:1.5em; }
-nav ul { display:flex; list-style:none; flex-wrap:wrap; }
-nav ul li { margin-left:20px; }
-nav ul li a { text-decoration:none; color:#fff; font-weight:bold; }
-#compteur-panier { color:#fff; font-weight:bold; }
 
-/* HERO */
-.hero { position:relative; text-align:center; }
-.hero-img {
-  width:100%;
-  height:350px;
-  object-fit:cover;
-  border-radius:8px; /* coins légèrement arrondis */
+header .logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.6em;
 }
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-img { 
+  width: 100%;
+  height: 450px;   /* hauteur normale pour carte produit */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  
+}
+
 .hero-text {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-  color:#fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
 }
+
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
 .hero-text button {
-  padding:10px 20px;
-  border:none;
-  border-radius:8px;
-  background:#3b7d2e;
-  color:#fff;
-  cursor:pointer;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 20px;
+  background: #3b7d2e;
+  color: #fff;
+  cursor: pointer;
 }
 
-/* À PROPOS */
+/* ================= A PROPOS ================= */
+
 .apropos {
-  display:flex;
-  padding:40px 20px;
-  gap:20px;
-  align-items:center;
+  display: flex;
+  padding: 40px 20px;
+  gap: 20px;
+  align-items: center;
 }
+
 .apropos img {
-  width:250px;
-  border-radius:8px;
+  width: 250px;
+  border-radius: 10px;
 }
-.apropos .texte { flex:1; }
-.apropos h2 { margin-bottom:15px; color:#3b7d2e; }
 
-/* BOUTIQUE */
+.apropos .texte {
+  flex: 1;
+}
+
+.apropos h2 {
+  margin-bottom: 15px;
+  color: #3b7d2e;
+}
+
+/* ================= BOUTIQUE ================= */
+
 .boutique {
-  padding:20px;
-  text-align:center;
+  padding: 40px 20px;
+  text-align: center;
 }
-.boutique h2 { margin-bottom:20px; color:#3b7d2e; }
-.boutique .cartes {
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-  justify-content:center;
+
+.boutique h2 {
+  margin-bottom: 30px;
+  color: #3b7d2e;
+  font-size: 28px;
 }
+
+.cartes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* CARTE PRODUIT */
+
 .carte {
-  flex:0 0 calc(33.333% - 20px); /* 3 produits par ligne sur ordinateur */
-  background:#fff;
-  border:1px solid #ccc;
-  border-radius:8px; /* coins arrondis moyens */
-  text-align:center;
-  padding:10px;
-  transition: transform 0.3s;
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.carte:hover { transform: scale(1.05); }
+
+.carte:hover {
+  transform: translateY(-8px);
+}
+
 .carte img {
-  width:100%;
-  border-radius:8px; /* coins arrondis uniformes */
-  border:1px solid #ccc; /* bordure fine autour de l'image */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
 }
-.carte h3 { margin:10px 0 5px 0; color:#3b7d2e; }
-.carte p { margin:5px 0; font-weight:bold; }
+
+.carte h3 {
+  margin: 10px 0 5px;
+  color: #3b7d2e;
+}
+
+.carte p {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #f26522;
+}
+
 .carte button {
-  margin-top:10px;
-  padding:8px 12px;
-  border:none;
-  border-radius:8px;
-  background:#f29f05;
-  color:#fff;
-  cursor:pointer;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #f26522;
+  color: #fff;
+  cursor: pointer;
 }
-.carte button:hover { opacity:0.8; }
 
-/* FORMULAIRE CONTACT */
+/* ================= CONTACT ================= */
+
 .contact-form {
-  padding:40px 20px;
-  max-width:500px;
-  margin:0 auto;
-  text-align:center;
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
 }
-.contact-form h2 { margin-bottom:20px; color:#3b7d2e; }
-.contact-form input, .contact-form textarea {
-  width:100%;
-  padding:10px;
-  margin-bottom:15px;
-  border-radius:8px;
-  border:1px solid #ccc;
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
+
 .contact-form button {
-  padding:10px 20px;
-  border:none;
-  border-radius:8px;
-  background:#3b7d2e;
-  color:#fff;
-  cursor:pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #3b7d2e;
+  color: #fff;
+  cursor: pointer;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer {
-  background:#f29f05;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-  margin-top:20px;
+  background: #f26522;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
 }
-footer p { margin:5px 0; }
 
-/* BOUTON RETOUR EN HAUT */
+/* ================= BOUTON RETOUR HAUT ================= */
+
 #btn-top {
-  position:fixed;
-  bottom:30px;
-  right:30px;
-  padding:10px 15px;
-  font-size:18px;
-  border:none;
-  border-radius:50%;
-  background:#3b7d2e;
-  color:white;
-  cursor:pointer;
-  display:none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 50%;
+  background: #3b7d2e;
+  color: white;
+  cursor: pointer;
+  display: none;
 }
 
-/* RESPONSIVE */
-@media (max-width:768px) {
-  /* HEADER */
-  header { flex-direction:column; align-items:flex-start; }
-  nav ul { flex-direction:column; margin-top:10px; }
-  nav ul li { margin:10px 0; }
+/* ================= RESPONSIVE MOBILE ================= */
 
-  /* À PROPOS */
-  .apropos { flex-direction:column; text-align:center; }
-  .apropos img { width:100%; max-width:300px; margin-bottom:20px; }
+@media (max-width: 768px) {
 
-  /* BOUTIQUE */
-  .carte { flex:0 0 90%; max-width:300px; } /* 1 produit par ligne sur mobile */
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .hero-img {
+    height: 250px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  .apropos {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .apropos img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .carte {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
 }
