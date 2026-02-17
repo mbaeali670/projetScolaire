@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Sunu Market</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Sunu Market</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">Sunu Market</div>
+<!-- HEADER -->
+<header>
+  <div class="logo">Sunu Market 🛒</div>
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="index.html#boutique">Boutique</a>
-    <a href="contact.html">Contact</a>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html#boutique">Boutique</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
-  <div class="panier">Panier (<span id="count">0</span>)</div>
+  <div id="compteur-panier">Panier (0)</div>
 </header>
 
-<section class="contact-section">
-  <h2>Contact</h2>
-  <form id="formcontact" class="contact-form"> 
-    <input type="text" placeholder="Nom" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Message" rows="5" required></textarea>
+<!-- FORMULAIRE CONTACT -->
+<section class="contact-form">
+  <h2>Contactez-nous</h2>
+  <form id="contact-form">
+    <input type="text" name="nom" placeholder="Nom" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" rows="5" placeholder="Message" required></textarea>
     <button type="submit">Envoyer</button>
   </form>
-  <script>
-    // Sélection du formulaire
-    const form = document.getElementById('contactForm');
-
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Empêche l'envoi réel du formulaire
-      alert("Merci ! Mme Aïcha a bien reçu votre message.");
-      form.reset(); // Réinitialise le formulaire si tu veux
-    });
-  </script>
 </section>
 
-<footer class="footer">
-  <p>© 2026 Sunu Market - Tous droits réservés</p>
-  <p>Binôme : MBAE ALI/Annyck Horine KOUMBA MAMFOUMBI</p>
-  <p>Ce que nous avons compris : créer un site vitrine avec HTML, CSS et JS.</p>
-  <p>Ce qui nous a été difficile : le responsive et la logique JavaScript.</p>
+<!-- FOOTER -->
+<footer>
+  <p>Nom1 + Nom2</p>
+  <p>Ce que nous avons compris : Créer un site vitrine responsive et interactif.</p>
+  <p>Ce qui nous a été difficile : Gestion du panier et responsive design.</p>
 </footer>
+
+<!-- BOUTON RETOUR EN HAUT -->
+<button id="btn-top">⬆</button>
+
 <script src="script.js"></script>
 </body>
 </html>
